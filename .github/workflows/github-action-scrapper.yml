@@ -1,14 +1,7 @@
 
-name: Docker Hub Push
+name: Run Scrapper
 
-on:
-  push:
-    branches:
-    - main
-
-  pull_request:
-    branches:
-    - main
+on: ['push']
 jobs:
   docker-push:
     runs-on: ubuntu-latest
