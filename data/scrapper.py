@@ -28,4 +28,4 @@ def get_words():
     return dictionaire_breton
     
 if __name__ == "__main__":
-    print(get_words())
+    scrap()
