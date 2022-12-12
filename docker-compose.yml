@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  generator:
+    image: efreipaul/breton_password_generator
+    ports:
+      - 8501:8501
