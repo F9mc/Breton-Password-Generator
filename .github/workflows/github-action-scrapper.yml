@@ -1,0 +1,15 @@
+
+name: Run Scrapper
+
+on: ['push']
+jobs:
+  docker-push:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' 
+    - run: python3 -m pip install -r requirement.txt
+    - run: python3 data/scrapper.py
