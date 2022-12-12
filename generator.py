@@ -1,16 +1,12 @@
 import random
-
-def get_word():
-    word = "" 
-    for i in range(random.randint(3,7)):
-        word += chr(random.randint(ord("a"),ord("z")))
-    return word
+import data.scrapper as sc
 
 def password_generator(nb_words=3,separator="_"):
+    dictionaire = sc.get_words()
     word = ""
     for n in range(nb_words):
         sep = "" if n == nb_words - 1 else separator
-        word += get_word() + sep
+        word += random.choice(dictionaire) + sep
     return word
 
 def main():

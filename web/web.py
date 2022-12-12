@@ -1,9 +1,7 @@
-from multiprocessing.sharedctypes import Value
 import streamlit as st
 import sys
-sys.path.insert(0,'../generator')
+sys.path.insert(0,'../Breton-Password-Generator/')
 from generator import password_generator
-
 
 def main():
     st.title("Generator de mot de passe breton")
