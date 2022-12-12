@@ -1,6 +1,14 @@
 
 name: Docker Hub Push
-on: [push]
+
+on:
+  push:
+    branches:
+    - main
+
+  pull_request:
+    branches:
+    - main
 jobs:
   docker-push:
     runs-on: ubuntu-latest
