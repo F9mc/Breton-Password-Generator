@@ -19,7 +19,12 @@ def main():
         value="_",
         placeholder="_",
     )
-    st.write(f"Mot de passe : {password_generator(size,separator)}")	
+
+    numbers = st.checkbox("Numbers")
+
+    campitalize = st.checkbox("Capitalize")
+
+    st.write(f"Mot de passe : {password_generator(size,separator,numbers,campitalize)}")	
 
 if __name__ == "__main__":
     main()
