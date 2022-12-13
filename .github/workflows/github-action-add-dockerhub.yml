@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: efreipaul/breton_password_generator
+          tags: ${{ secrets.DOCKERHUB_REPO }}
