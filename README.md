@@ -3,7 +3,8 @@
 
 Générateur de mot de passe breton.
 
-## Docker
-Possibilié de build avec le Dockerfile.
-Ou image sur [DockerHub](https://hub.docker.com/repository/docker/efreipaul/breton_password_generator).
+![Screenshot](images/image_v1.png)
 
+## Utilisation
+- Image sur [DockerHub](https://hub.docker.com/repository/docker/efreipaul/breton_password_generator).
+- Script python ```$ python3 -m streamlit run web/web.py```
