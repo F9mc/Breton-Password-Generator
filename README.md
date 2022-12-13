@@ -1,4 +1,5 @@
 # Breton-Password-Generator
+[![Docker Hub Push](https://github.com/Efrei-Paul/Breton-Password-Generator/actions/workflows/github-action-add-dockerhub.yml/badge.svg?branch=main)](https://github.com/Efrei-Paul/Breton-Password-Generator/actions/workflows/github-action-add-dockerhub.yml)
 
 Générateur de mot de passe breton.
 
