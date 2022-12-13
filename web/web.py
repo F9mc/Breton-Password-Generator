@@ -1,4 +1,4 @@
-from tkinter import X
+from tkinter import X, Button
 from zxcvbn import zxcvbn
 import streamlit as st
 import os
@@ -21,8 +21,10 @@ def main():
         page_icon="🔑",
         initial_sidebar_state="expanded"
     )
-
-    size = st.number_input(
+    container1 = st.container()
+    container2 = st.container()
+    col1, col2 = container2.columns(2)
+    size = container1.number_input(
         label="How many words ?",
         min_value=2,
         max_value=30,
@@ -31,18 +33,21 @@ def main():
         format="%d"
     )
 
-    separator = st.text_input(
+    separator = container1.text_input(
         label="Separator",
         value="_",
         placeholder="_",
     )
 
-    numbers = st.checkbox("Numbers")
-
-    capitalize = st.checkbox("Capitalize")
-    password = password_generator(size,separator,numbers,capitalize)
-    st.write(f"Mot de passe : {password}")
-    st.write(f"Strength: {get_score(password)}")
+    with col1:
+        numbers = st.checkbox("Numbers")
+        capitalize = st.checkbox("Capitalize")
+        password = password_generator(size,separator,numbers,capitalize)
+        st.write(f"Mot de passe : {password}")
+        st.write(f"Strength: {get_score(password)}")
+    with col2:
+        if st.button("New password"):
+            password = password_generator(size,separator,numbers,capitalize)
 
 if __name__ == "__main__":
     main()
