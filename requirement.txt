@@ -1,3 +1,4 @@
 streamlit
 pytest
 python-dotenv
+zxcvbn-python

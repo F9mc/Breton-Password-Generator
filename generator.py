@@ -12,6 +12,8 @@ def password_generator(nb_words=3,separator="_",numbers=True,capitalize=True):
         raise Exception("Number variable must be a boolean")
     if type(capitalize) != bool:
         raise Exception("Capitalize variable must be a boolean")
+    if separator == "":
+        separator = "_"
     
     dictionaire = sc.get_words()
     word = ""
