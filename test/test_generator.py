@@ -2,7 +2,6 @@ import sys
 import os
 import re
 import pytest
-from cairo import CAPI
 from dotenv import load_dotenv
 
 load_dotenv()

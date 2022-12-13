@@ -1,5 +1,4 @@
 import random
-import string
 import data.scrapper as sc
 import os
 from dotenv import load_dotenv
