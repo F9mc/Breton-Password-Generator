@@ -1,6 +1,13 @@
 import streamlit as st
+import os
+from dotenv import load_dotenv
 import sys
-sys.path.insert(0,'../Breton-Password-Generator/')
+
+load_dotenv()
+
+PATH=os.path.dirname(os.path.abspath(__file__)) + "/"
+
+sys.path.insert(0,PATH+"../")
 from generator import password_generator
 
 def main():
@@ -22,9 +29,9 @@ def main():
 
     numbers = st.checkbox("Numbers")
 
-    campitalize = st.checkbox("Capitalize")
+    capitalize = st.checkbox("Capitalize")
 
-    st.write(f"Mot de passe : {password_generator(size,separator,numbers,campitalize)}")	
+    st.write(f"Mot de passe : {password_generator(size,separator,numbers,capitalize)}")	
 
 if __name__ == "__main__":
     main()
